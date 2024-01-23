@@ -14,7 +14,9 @@ def create_app(debug=False):
     app.debug=debug
     
     from .main import main as main_blueprint
+    from .main import api_blueprint
     app.register_blueprint(main_blueprint)
+    app.register_blueprint(api_blueprint)
     
     socketio.init_app(app)
     return app

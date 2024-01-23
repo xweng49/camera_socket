@@ -32,11 +32,12 @@ def disconnect():
 @socketio.on("stream", namespace = "/camera")
 def stream():
     """
+    stream image to frontend
     """
     global camera
     frame = camera.frame
     processed_frame = base64.b64encode(cv2.imencode('.jpg', frame)[1]).decode()
     b64_src = "data:image/jpg;base64,"
     processed_frame = b64_src + processed_frame
-    print('python stream')
+    # print('python stream')
     emit("input_image", processed_frame)
