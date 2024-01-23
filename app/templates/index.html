@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Flask-SocketIO</title>
+        <script type="text/javascript" src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script type="text/javascript" src="//cdn.socket.io/4.4.1/socket.io.min.js"></script>
+
+        <style>
+            #video {
+                transform: rotateY (180deg);
+                -webkit-transform:rotateY(180deg);
+                -moz-transform:rotateY(180deg);
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <div class="video">
+            <img id="photo" width="400" height="300">
+        </div>
+
+        <script src="{{ url_for('static', filename='script.js')}}"></script>
+    </body>
+</html>
+<h1>Hello World</h1>
+
